@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cloud Robot blog</title>
+    <description>About Robot</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Mon, 02 Sep 2024 16:31:15 -0700</pubDate>
+    <lastBuildDate>Mon, 02 Sep 2024 16:31:15 -0700</lastBuildDate>
+    <generator>Jekyll v4.3.3</generator>
+    
+      <item>
+        <title>Pixhawk 4 rover hardware</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Steps to build PIXHAWK 4 rover based on a Traxxas X-Maxx RC truck with a Jetson Xavier as a Companion computer&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;goals&quot;&gt;Goals&lt;/h2&gt;
+&lt;p&gt;To create a reference platform for the following:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Multi-camera verification&lt;/li&gt;
+  &lt;li&gt;Data driven verification&lt;/li&gt;
+  &lt;li&gt;Real world ML-Ops&lt;/li&gt;
+  &lt;li&gt;A source for training data&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;parts-list&quot;&gt;Parts List&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Traxxas X-Maxx RC Monster Truck&lt;/li&gt;
+  &lt;li&gt;SparkFun FTDI Basic Breakout - 3.3V cable&lt;/li&gt;
+  &lt;li&gt;Traxxas 6700 Battery and 12A EZ Plus charger (6700)&lt;/li&gt;
+  &lt;li&gt;Nvidia Jetson Xavier development board&lt;/li&gt;
+  &lt;li&gt;25000 PC portable battery with 19V output&lt;/li&gt;
+  &lt;li&gt;Delkin Devices Fat Gecko mini suction camera mount for 4 camera kit&lt;/li&gt;
+  &lt;li&gt;55 mm spacers/ standoffs&lt;/li&gt;
+  &lt;li&gt;60 mm spacers/ standoffs&lt;/li&gt;
+  &lt;li&gt;35 mm spacers/ standoffs&lt;/li&gt;
+  &lt;li&gt;Acrylic Plexiglass Sheet 1/4” x 12” x 24”&lt;/li&gt;
+  &lt;li&gt;M3 screws x 10 mm&lt;/li&gt;
+  &lt;li&gt;M3 screws x 20 mm&lt;/li&gt;
+  &lt;li&gt;PIXHAWK 4 kit&lt;/li&gt;
+  &lt;li&gt;X8R receiver&lt;/li&gt;
+  &lt;li&gt;Taranis QX7&lt;/li&gt;
+  &lt;li&gt;e-CAM20_CUXVR - Four Synchronized 4K Cameras&lt;/li&gt;
+  &lt;li&gt;Taranis X7 and X8R&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;1-modifying-the-truck&quot;&gt;1. Modifying the Truck&lt;/h3&gt;
+&lt;p&gt;The Traxxas X-Maxx is an affordable platform to carry heavy equipment, suitable for containing the other elements of the rover. &lt;br /&gt;
+&lt;img src=&quot;/img/in-post/xmaxx.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Two layers of Plexiglass are installed to hold the PIXHAWK 4, Xavier computer, and camera setup.&lt;/p&gt;
+
+&lt;p&gt;The X-Maxx’s onboard ESC is kept but the actual control wire is rerouted from the original 2.4G receiver box to pins 1 and 3 on the PIXHAWK 4 power board IO port.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-building-the-bottom-layer&quot;&gt;2. Building the bottom layer&lt;/h3&gt;
+
+&lt;p&gt;Standoffs are used to hold the PVC board to existing holes on the X-Maxx chassis. However, two holes in the front need to be newly created and threaded.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/in-post/xmaxx-body-drill.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;3-building-the-top-layer&quot;&gt;3. Building the top layer&lt;/h3&gt;
+
+&lt;p&gt;The second platform is created to hold the camera setup and also to protect the PIXHAWK 4 and computer. The image below depicts the finished assembly.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/in-post/xmaxx-body.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;4-wiring-the-motors&quot;&gt;4. Wiring the motors&lt;/h3&gt;
+
+&lt;p&gt;This is the standard wire diagram for accessories to be connected to the PIXHAWK 4.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/in-post/pixhawk4.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A standard wiring diagram for this rover is as follows.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/in-post/pix4-wire.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Since the X-Maxx requires a high voltage that is provided by  two batteries, the wires needs to be redesigned to accomodate the PM07 power board.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/in-post/xmaxx-wire.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The PM07 board to connect ESC actual wiring is like this. The connector is trx female connector.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/in-post/xmaxx-pm07.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The wiring that connects the PM07 board to the battery is as follows. The connector shown in the image is a trx male connector.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/in-post/xmaxx-battery.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The X-Maxx setup after completion:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/in-post/xmaxx-complete.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;5-wiring-the-xavier&quot;&gt;5. Wiring the Xavier&lt;/h3&gt;
+
+&lt;p&gt;The battery used for the Xavier is a Krionia 25000mAH battery which can output a voltage of 19V.
+A power cable connects the electrical output of the battery directly to the Xavier.&lt;/p&gt;
+
+&lt;h3 id=&quot;6-wiring-the-ecs-and-steering-cables&quot;&gt;6. Wiring the ECS and steering cables&lt;/h3&gt;
+
+&lt;p&gt;The X-Maxx’s ESC and steering cables can be found inside the carrier box.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/in-post/xmaxx-esc-cable.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The cable on the left is the ESC and the cable on the right is the steering cable. These two cables are rerouted from the receiver to GPIO pins 1 and 3 on the PM07.&lt;/p&gt;
+
+&lt;h3 id=&quot;7-connecting-the-xavier-to-the-pixhawk-4&quot;&gt;7. Connecting the Xavier to the PIXHAWK 4&lt;/h3&gt;
+
+&lt;p&gt;In order connect the  Xavier with the PIXHAWK4, a UART is needed. A telem2 is typically used for this purpose.  Therefore, an additional cable is used.&lt;/p&gt;
+
+&lt;p&gt;On the Xavier, the ports are as follows:&lt;/p&gt;
+
+&lt;p&gt;Jetson Xavier GPIO Pin 6 (GND) → Cable GND (Black Wire)
+Jetson Xavier GPIO Pin 8 (UART1_TX) → Cable RXD (White Wire)
+Jetson Xavier GPIO Pin 10 (UART1-RX) → Cable TXD (Green Wire)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/in-post/xmaxx-uart.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 21 Nov 2021 07:00:00 -0800</pubDate>
+        <link>http://localhost:4000/2021/11/21/pix4-xmaxx-hw/</link>
+        <guid isPermaLink="true">http://localhost:4000/2021/11/21/pix4-xmaxx-hw/</guid>
+        
+        <category>Robot</category>
+        
+        <category>Self-driving</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Pixhawk 4 rover software</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;pixhawk 4 rover software setup&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;assumptions&quot;&gt;Assumptions&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Assuming the rover and pix 4 hardware wiring has been completed.&lt;/li&gt;
+  &lt;li&gt;QGroundControl firmware and Rover frame update process completed.&lt;/li&gt;
+  &lt;li&gt;Motor power is on while Xavier power is not needed at this moment.&lt;/li&gt;
+  &lt;li&gt;Windows 10 PC with QGroundControl and USB cable from PC to Pix 4 is connected.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;1-flash-firmware&quot;&gt;1. Flash firmware&lt;/h3&gt;
+
+&lt;p&gt;QGroundControl desktop versions can install PX4 Pro or ArduPilot firmware onto controller boards. By default QGC will install the current stable version of the selected autopilot, but you can also choose to install beta builds, daily builds, or custom firmware files&lt;/p&gt;
+
+&lt;p&gt;First select the Gear icon (Vehicle Setup) in the top toolbar and then Firmware in the sidebar.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/in-post/qc_firmware_1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For a Pixhawk-compatible board choose PIX4 Flight Stack radio buttons to download the current stable release.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/in-post/qc_firmware_2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For rover purpose choose ArduRover xxx&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/in-post/qc_firmware_3.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Click the OK button to start the update.&lt;/p&gt;
+
+&lt;p&gt;The firmware will then proceed through a number of upgrade steps (downloading new firmware, erasing old firmware etc.). Each step is printed to the screen and overall progress is displayed on a progress bar&lt;/p&gt;
+
+&lt;h3 id=&quot;2-airframe-selection&quot;&gt;2. Airframe selection&lt;/h3&gt;
+
+&lt;p&gt;QGroundControl allows rover-specific configuration by choosing the correct airframe. Select the Airframe tab.
+Scroll down the list to find the Rover icon.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/in-post/qc_firmware_4.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;3-calibration&quot;&gt;3. Calibration&lt;/h3&gt;
+
+&lt;p&gt;Please follow the official guide to complete the GPS, compass and remote control calibration.&lt;/p&gt;
+
+&lt;h3 id=&quot;4-test-qx7-control-for-steering-and-throttle&quot;&gt;4. Test QX7 control for steering and throttle&lt;/h3&gt;
+
+&lt;p&gt;Disable the preAlarm check for all and safety check turn on. As this point the GPS light should be solid red.&lt;/p&gt;
+
+&lt;p&gt;Once the power is up for pix4 change the QX7 joystick and you should see the xmaxx steering and throttle works.&lt;/p&gt;
+
+&lt;h2 id=&quot;common-issues&quot;&gt;Common issues&lt;/h2&gt;
+&lt;h3 id=&quot;1-qx7-not-able-to-bind-x8r&quot;&gt;1. QX7 not able to bind X8R.&lt;/h3&gt;
+&lt;p&gt;If the binding process is correct the X8R lef light should be green. However sometimes the light is solid red which means the bind failed.  check another article for this issue.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-qx7-not-able-to-control-motor-or-steering&quot;&gt;2. QX7 not able to control motor or steering.&lt;/h3&gt;
+&lt;p&gt;If the binding between QX7 and X8R is successful (green led) but motor or steering not working, check another article for this issue.&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 12 Nov 2021 04:00:00 -0800</pubDate>
+        <link>http://localhost:4000/2021/11/12/pix4-xmaxx-sw/</link>
+        <guid isPermaLink="true">http://localhost:4000/2021/11/12/pix4-xmaxx-sw/</guid>
+        
+        <category>Robot</category>
+        
+        <category>Self-driving</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>ERDOS</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;ERDOS is a platform for developing self-driving cars and robotics applications.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;erdos&quot;&gt;ERDOS&lt;/h2&gt;
+
+&lt;p&gt;The system is built using techniques from streaming dataflow and applications are modeled as directed graphs, in which data flows through streams and is processed by operators.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 25 Mar 2021 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2021/03/25/pylot-erdos/</link>
+        <guid isPermaLink="true">http://localhost:4000/2021/03/25/pylot-erdos/</guid>
+        
+        <category>Robot</category>
+        
+        <category>Deep learning</category>
+        
+        <category>Self-driving</category>
+        
+        <category>Rust</category>
+        
+        <category>Python</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

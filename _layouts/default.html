@@ -3,27 +3,20 @@
 
 {% include head.html %}
 
-<body>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
 
-  {% if site.data.settings.google-analytics %}
-  {% include google-analytics.html %}
-  {% endif %}
+    {% include nav.html %}
 
-  {% include header.html %}
-
-  <!-- begin content -->
-  <main class="content" aria-label="Content">
     {{ content }}
-  </main>
-  <!-- end content -->
 
-  <div class="top ion ion-ios-arrow-up" title="Top"></div>
+    {% include footer.html %}
 
-  {% include search.html %}
 
-  {% include footer.html %}
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
 
-  {% include javascripts.html %}
 </body>
 
 </html>
