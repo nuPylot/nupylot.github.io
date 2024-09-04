@@ -1,0 +1,57 @@
+I"l<p>Cookie is a landing page site using <a href="https://www.tailwindcss.com/">Tailwind CSS</a>. You can learn more about customizing the site in <code class="language-plaintext highlighter-rouge">README.md</code> file in root directory of the project. You can learn more about Jekyll  at <a href="https://jekyllrb.com/">jekyllrb.com</a></p>
+
+<p>You can find the source code for cookie at GitHub:
+<a href="https://github.com/abhinavs">abhinavs</a> /
+<a href="https://github.com/abhinavs/cookie">cookie</a></p>
+
+<p>Cookie is a Jekyll based static website for your next project. It uses Tailwind CSS and comes with</p>
+<ol>
+  <li>Landing Page</li>
+  <li>Blog</li>
+  <li>Auxilarly Pages like Terms, Privacy Policy, Contact and About us.</li>
+</ol>
+
+<p>All pages are responsive and mobile friendly.</p>
+
+<h2 id="why-jekyll">Why Jekyll?</h2>
+<p>Jekyll is a static website generator - what it means is that in production, your site will be extremely fast because it has been ‘compliled’ into HTML pages while deployment. Separating your landing website from your app website is also useful because it takes away the load which otherwise your app website would have handled - it keeps your app website free.</p>
+
+<p>Cookie uses Tailwind 2.0 which is a good improvement over Tailwind 1.0.</p>
+
+<h2 id="soopr">Soopr</h2>
+<p><a href="https://www.soopr.co">Soopr</a> is the easiest way to for you add share reaction buttons to your blog and website, integrate an URL shortener and analytics service. Soopr lets you manage all of these using a powerful dashboard.</p>
+
+<p>Cookie uses Soopr for share and like buttons and is already integrated. By default, Cookie shows <code class="language-plaintext highlighter-rouge">circular</code> Twitter, Facebook and Copy buttons in <code class="language-plaintext highlighter-rouge">base</code> size. To add <code class="language-plaintext highlighter-rouge">like</code> button, please signup for free on <a href="https://www.soopr.co">Soopr</a></p>
+
+<p>Check out the <a href="https://www.soopr.co">Soopr Website</a> for more info on how to get the most out of Soopr.</p>
+
+<h2 id="installation">Installation</h2>
+<ol>
+  <li>Fork this repository.</li>
+  <li><code class="language-plaintext highlighter-rouge">cd cookie</code></li>
+  <li><code class="language-plaintext highlighter-rouge">bin/bootstrap</code></li>
+</ol>
+
+<h2 id="starting-server">Starting Server</h2>
+<p><code class="language-plaintext highlighter-rouge">bin/start</code></p>
+
+<h2 id="customizing">Customizing</h2>
+<ol>
+  <li>You can customized landing page by modifying index.html in root directory.</li>
+  <li>You can add analytics, URL shortner and share buttons using Soopr, sign up on <a href="https://www.soopr.co">Soopr</a>, get a publish token for your website and add it in <code class="language-plaintext highlighter-rouge">_config.yml</code> file</li>
+  <li>You can customnize other website pages by modifying files present in <code class="language-plaintext highlighter-rouge">_pages</code> directory. You can add more pages too - you will be able to directly link to them using filename. Don’t forget to customize Terms &amp; Privacy Policy.</li>
+  <li>You can write blog posts in <code class="language-plaintext highlighter-rouge">_posts</code> directory. Tailwind Typography for better blog formating and code syntax highlighting is already included.</li>
+  <li>You should also checkout <code class="language-plaintext highlighter-rouge">_config.yml</code> in root directory, and add relevant details. Many of them are used for SEO purposes.</li>
+  <li>You should also add favicons in <code class="language-plaintext highlighter-rouge">custom-head.html</code> present in <code class="language-plaintext highlighter-rouge">_includes</code> directory.</li>
+  <li>You can customize image assets in <code class="language-plaintext highlighter-rouge">assets/img</code> directory.</li>
+  <li>You will have to hook the ‘Work with Us’ form present on main page with a real backend.</li>
+  <li><a href="https://fontawesome.com/">Font Awesome</a> is also integrated, to add any icon in your HTML files, you can refer to the website</li>
+</ol>
+
+<h2 id="deploy-instructions">Deploy Instructions</h2>
+<p>TODO</p>
+
+<h2 id="credits">Credits</h2>
+<p>Landing page is based on <a href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation">Tailwind Starter Kit</a> - thanks for providing an amazing landing page under MIT License.</p>
+
+:ET
