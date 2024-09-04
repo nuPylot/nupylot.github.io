@@ -1,11 +1,11 @@
 # Site settings
-title: Cloud Robot blog
-SEOTitle: cloud robot
+title: Nupylot Inc.
+SEOTitle: Nupylot
 header-img: img/tag-bg.jpg
 email: 
 description: "About Robot"
 keyword: "Robot"
-url: "https://cloud-robot.github.io"              # your host, for absolute URL
+url: "https://localhost"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 

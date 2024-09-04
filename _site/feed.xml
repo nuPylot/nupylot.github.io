@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cloud Robot blog</title>
-    <description>About Robot</description>
+    <title>Embodied Intelligence</title>
+    <description>About Nupylot</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 02 Sep 2024 16:31:15 -0700</pubDate>
-    <lastBuildDate>Mon, 02 Sep 2024 16:31:15 -0700</lastBuildDate>
+    <pubDate>Wed, 04 Sep 2024 09:47:32 -0700</pubDate>
+    <lastBuildDate>Wed, 04 Sep 2024 09:47:32 -0700</lastBuildDate>
     <generator>Jekyll v4.3.3</generator>
     
       <item>
