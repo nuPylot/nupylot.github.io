@@ -1,0 +1,30 @@
+---
+layout:     post
+title:      "DORA"
+subtitle:   "Code analysis and run in Ubuntu PC"
+date:       2024-03-25 
+author:     "bobd988"
+header-img: "img/post-bg-digital-native.jpg"
+catalog: true
+tags:
+    - Robot
+    - Deep learning
+    - Self-driving 
+    - Rust
+    - Python
+---
+>Dora is an innovative open-source framework designed for building modular, distributed, and high-performance robotic applications. Dora provides a flexible and efficient middleware for connecting various components of a robot, such as sensors, actuators, and AI models, enabling seamless communication and coordination across different modules.
+> 
+## Features
+
+- Modular Architecture: Dora’s architecture is built around a modular design, allowing developers to easily integrate different components, such as sensors, perception modules, control algorithms, and machine learning models. This modularity enables rapid prototyping and flexible adaptation to various robotic platforms and use cases.
+
+- Distributed Communication: Dora leverages a lightweight, message-passing mechanism to enable efficient communication between components distributed across different machines or hardware. This approach ensures low-latency, high-throughput data exchange, making Dora ideal for real-time robotics applications.
+
+- Integration with AI and ML Models: The framework supports integration with state-of-the-art AI and machine learning models, including large language models (LLMs) and vision language models (VLMs). This capability empowers developers to build intelligent robots that can perform complex tasks like natural language understanding, image recognition, decision-making, and autonomous navigation.
+
+- Cross-Platform Compatibility: Dora is designed to be platform-agnostic, supporting a variety of programming languages (like Rust, Python, and C++) and operating systems. This makes it a versatile choice for developers who work across different environments or need to deploy robotic solutions on multiple platforms.
+
+- Developer-Friendly Ecosystem: With extensive documentation, a growing community of contributors, and a suite of development tools, Dora offers an ecosystem that supports developers from prototyping to production. The framework is built with performance and ease of use in mind, making it accessible to both novice and expert roboticists.The system is built using techniques from streaming dataflow and applications are modeled as directed graphs, in which data flows through streams and is processed by operators. 
+
+ 
