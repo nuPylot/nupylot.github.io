@@ -1,50 +1,51 @@
-title: Cookie
-description: > # this means to ignore newlines until "show_excerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "/"
-url: https://cookie-demo.netlify.app # change this URL, this is needed for generating right sitemap
+baseurl: '/'
+permalink: pretty
+title: 'Jekyll Serif'
 
-permalink: "/blog/:title/"
+logo:
+  mobile: "images/logo/logo-mobile.svg"
+  mobile_height: "32px"
+  mobile_width: "32px"
+  desktop: "images/logo/logo.svg"
+  desktop_height: "32px"
+  desktop_width: "120px"
 
-plugins:
-  - jekyll-feed
-  - jekyll-soopr-seo-tag
-  - jekyll-sitemap
-  - jekyll-minifier
-
-css_dir: "assets/css" # defaults to "css"
-
-highlighter: rouge
+home: 
+  limit_services: 6
 
 collections:
-  posts:
+  services:
     output: true
-    permalink: "/blog/:title"
-  pages:
+    sort_by: weight
+  team:
     output: true
-    permalink: "/:title"
 
-jekyll-minifier:
-  uglifier_args:
-    harmony: true
+defaults:
+  - scope:
+      path: ""
+      type: "services"
+    values:
+      layout: "service"
+  - scope:
+      path: ""
+      type: "team"
+    values:
+      layout: "team"
 
-soopr:
-  publish_token: "" # sign up at https://www.soopr.co to get your publish token and personalize share and reaction options
+sass:
+  style: compressed # possible values: nested expanded compact compressed
 
-twitter:
-  card: summary_large_image
+plugins:
+  - jekyll-environment-variables
 
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - package.json
-  - package-lock.json
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - LICENSE.md
+  - LICENSE
   - README.md
-  - postcss.config.js
-  - purgecss.config.js
-  - tailwind.config.js
-  - .gitignore
-  - vendor

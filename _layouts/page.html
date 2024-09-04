@@ -1,16 +1,15 @@
 ---
 layout: default
+bodyClass: "page-basic"
 ---
-<div class="relative py-24 md:py-28 bg-white overflow-hidden font-sans">
-  <div class="relative px-4 sm:px-6 lg:px-8">
-    <div class="text-lg max-w-prose mx-auto mb-8">
-      <h1
-        class="font-misc mt-2 mb-4 text-4xl text-center-DIS leading-8 font-extrabold text-gray-800 md:text-4xl sm:leading-10">
-        {{ page.title | escape }}</h1>
-        <div class="max-w-prose mx-auto mt-4 mb-6 soopr-btn soopr-btn-def" style="min-height: 36px;"></div>
+
+<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+    <div class="row justify-content-start">
+        <div class="col-12 col-md-8">
+            <div class="service service-single">
+                <h1 class="title">{{page.title}}</h1>
+                <div class="content">{{content}}</div>
+            </div>
+        </div>
     </div>
-    <div class="prose prose-lg text-gray-800 mx-auto">
-      {{ content }}
-    </div>
-  </div>
 </div>

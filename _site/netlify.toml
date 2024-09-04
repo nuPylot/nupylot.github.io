@@ -1,14 +1,7 @@
 [build]
   command = "jekyll build"
+  publish = "_site"
 
-[context.production.environment]
+[build.environment]
   JEKYLL_ENV = "production"
-  NODE_VERSION = "18"
-
-[context.branch-deploy.environment]
-  JEKYLL_ENV = "staging"
-  NODE_VERSION = "18"
-
-[context.deploy-preview.environment]
-  JEKYLL_ENV = "staging"
-  NODE_VERSION = "18"
+  RUBY_VERSION = "3.2.2"
