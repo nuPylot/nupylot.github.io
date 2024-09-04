@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "ERDOS"
+title:      "DORA"
 subtitle:   "Code analysis and run in Ubuntu PC"
 date:       2021-03-25 
 author:     "bobd988"
@@ -14,9 +14,9 @@ tags:
     - Python
 ---
 
-> ERDOS is a platform for developing self-driving cars and robotics applications. 
+> DORA is a platform for developing self-driving cars and robotics applications. 
 
-## ERDOS
+## DORA
 
 The system is built using techniques from streaming dataflow and applications are modeled as directed graphs, in which data flows through streams and is processed by operators. 
 

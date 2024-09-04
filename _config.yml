@@ -1,9 +1,9 @@
 # Site settings
-title: Embodied Intelligence
+title: Nupylot Embodied Intelligence
 SEOTitle: Nupylot
 header-img: img/tag-bg.jpg
 email: 
-description: "About Robot"
+description: "About Nupylot"
 keyword: "Robot"
 url: "https://localhost"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
