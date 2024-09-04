@@ -82,10 +82,4 @@ service-worker: true
 
 
 
-# Friends   
-friends: [
-   {
-        title: "Ardupilot",
-        href: "https://ardupilot.org/"
-    }
-]
+
