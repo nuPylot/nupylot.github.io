@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Pixhawk 4 rover software"
+title:      "Mobile Robot kit with AI"
 subtitle:   "Software setup for Xmaxx with Pixhawk 4 and Xavier"
 date:       2021-11-12 12:00:00
 author:     "gary ding"
