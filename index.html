@@ -1,42 +1,343 @@
----
-layout: page
-description: ""
----
+<!DOCTYPE html>
+<html lang="en" class="h-full"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.3 -->
+<title>NuPylot. | XinXun Intelligence</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="NuPylot." />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="XinXun Intelligence" />
+<meta property="og:description" content="XinXun Intelligence" />
+<link rel="canonical" href="https://xinxun-robot.github.io/" />
+<meta property="og:url" content="https://xinxun-robot.github.io/" />
+<meta property="og:site_name" content="NuPylot." />
+<meta property="og:image" content="https://soopr.xyz/images/card?url=https://xinxun-robot.github.io/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:image" content="https://soopr.xyz/images/card?url=https://xinxun-robot.github.io/" />
+<meta property="twitter:title" content="NuPylot." />
+<meta name="twitter:site" content="@" />
+<script type="application/ld+json">
+{"name":"NuPylot.","url":"https://xinxun-robot.github.io/","@type":"WebSite","description":"XinXun Intelligence","headline":"NuPylot.","@context":"https://schema.org"}</script>
+<script async defer data-soopr-token="" src="https://sdk.soopr.co/soopr.js"  ></script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <link rel="stylesheet" href="/assets/css/style.css">
+    <link
+      rel="stylesheet"
+      href="/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
+    /><link type="application/atom+xml" rel="alternate" href="https://xinxun-robot.github.io/feed.xml" title="NuPylot." />
 
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">
-            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-        <div class="post-content-preview">
-            {{ post.content | strip_html | truncate:200 }}
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/assets/img/favicons/site.webmanifest">
+<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body class='h-full'><nav
+      class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-gray-800"
+    >
+      <div
+        class="container px-4 mx-auto flex flex-wrap items-center justify-between"
+      >
+        <div
+          class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start"
+        >
+          <a
+            class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
+            href="/"
+            >NuPylot</a
+          ><button
+            class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+            type="button"
+            onclick="toggleNavbar('example-collapse-navbar')"
+          >
+            <i class="text-white fas fa-bars"></i>
+          </button>
         </div>
-    </a>
-    <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
-</div>
-<hr>
-{% endfor %}
+        <div
+          class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden"
+          id="example-collapse-navbar"
+        >
 
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}
+        </div>
+      </div>
+    </nav>  <div class="text-gray-800 antialiased">
+    
+    <main>
+      <div
+        class="relative pt-16 pb-32 flex content-center items-center justify-center"
+        style="min-height: 45vh;"
+      >
+        <div
+          class="absolute top-0 w-full h-full bg-center bg-cover"
+          style='background-image: url("https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1267&amp;q=80");'
+        >
+          <span
+            id="blackOverlay"
+            class="w-full h-full absolute opacity-75 bg-black"
+          ></span>
+        </div>
+        <div class="container relative mx-auto">
+          <div class="items-center flex flex-wrap">
+            <div class="w-full lg:w-7/12 px-4 mx-auto text-center">
+              <div class="px-4">
+                <h1 class="text-white font-semibold text-5xl mb-6">
+                  Making robot intelligence affordable for all
+                </h1>
+                <p class="mt-4 text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                  Our embodied intelligence solutions provide a full range of services—from hardware design to software development, and from data analysis to continuous optimization—adaptable to industries and application needs. We are committed to offering research institutions, enterprises, and developers flexible, reliable, and efficient solutions
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
+          style="height: 70px; transform: translateZ(0px);"
+        >
+          <svg
+            class="absolute bottom-0 overflow-hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+            version="1.1"
+            viewBox="0 0 2560 100"
+            x="0"
+            y="0"
+          >
+            <polygon
+              class="text-gray-300 fill-current"
+              points="2560 0 2560 100 0 100"
+            ></polygon>
+          </svg>
+        </div>
+      </div>
+      <section class="pb-20 bg-gray-300 -mt-24">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-row flex-wrap mx-auto">
+            <div class="pt-6 w-full md:w-4/12 px-2 text-center">
+              <div
+                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+              >
+                <div class="px-4 py-5 flex-auto">
+                  <div
+                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400"
+                  >
+                    <i class="fas fa-fingerprint"></i>
+                  </div>
+                  <h6 class="text-xl font-semibold mb-3">DORA Robot Middleware</h6>
+                  <p class="mt-2 mb-4 text-gray-600">
+                    Provides high performance middleware designed specifically for robotics applications. It offers modular, low-latency communication mechanisms for robot systems, helping developers more efficiently perform multi-sensor data fusion and distributed computing.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="pt-6 w-full md:w-4/12 px-2 text-center">
+              <div
+                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+              >
+                <div class="px-4 py-5 flex-auto">
+                  <div
+                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400"
+                  >
+                    <i class="fas fa-fingerprint"></i>
+                  </div>
+                  <h6 class="text-xl font-semibold mb-3">Industrial System Integration & Optimization</h6>
+                  <p class="mt-2 mb-4 text-gray-600">
+                    Provides integration of robotic systems into clients' existing IT architecture and operating systems, including ERP, WMS, MES, etc. Ensures seamless collaboration between robots and other systems, enabling real-time information sharing and business process automation.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="pt-6 w-full md:w-4/12 px-2 text-center">
+              <div
+                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+              >
+                <div class="px-4 py-5 flex-auto">
+                  <div
+                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400"
+                  >
+                    <i class="fas fa-fingerprint"></i>
+                  </div>
+                  <h6 class="text-xl font-semibold mb-3">Agricultural Automation</h6>
+                  <p class="mt-2 mb-4 text-gray-600">
+                    Provides robotic technology applications for small-scale automation tasks in agriculture, such as harvesting and weeding. Low-cost, high-performance robots for small-scale agricultural automation. Robots are designed to be used in a wide range of agricultural scenarios.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="pt-6 w-full md:w-4/12 px-2 text-center">
+              <div
+                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+              >
+                <div class="px-4 py-5 flex-auto">
+                  <div
+                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400"
+                  >
+                    <i class="fas fa-fingerprint"></i>
+                  </div>
+                  <h6 class="text-xl font-semibold mb-3">Data Collection & Analysis</h6>
+                  <p class="mt-2 mb-4 text-gray-600">
+                    Provides data analysis and visualization tools to help monitor production conditions in real-time, optimize strategies and resource usage, improve yield and quality.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="pt-6 w-full md:w-4/12 px-2 text-center">
+              <div
+                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+              >
+                <div class="px-4 py-5 flex-auto">
+                  <div
+                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400"
+                  >
+                    <i class="fas fa-fingerprint"></i>
+                  </div>
+                  <h6 class="text-xl font-semibold mb-3">Remote Monitoring & Control</h6>
+                  <p class="mt-2 mb-4 text-gray-600">
+                    Provides cloud platform for remote monitoring of robot operation status, viewing real-time operation data, and adjusting robot tasks as needed.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="pt-6 w-full md:w-4/12 px-2 text-center">
+              <div
+                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+              >
+                <div class="px-4 py-5 flex-auto">
+                  <div
+                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400"
+                  >
+                    <i class="fas fa-fingerprint"></i>
+                  </div>
+                  <h6 class="text-xl font-semibold mb-3">Customized Solutions</h6>
+                  <p class="mt-2 mb-4 text-gray-600">
+                    We provide specially designed robots and solutions for different application scenarios to meet the specific needs of various industries.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-wrap items-center mt-32">
+            <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
+              <div
+                class="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100"
+              >
+                <i class="fas fa-user-friends text-xl"></i>
+              </div>
+              <h3 class="text-3xl mb-2 font-semibold leading-normal">
+                Full-Stack AI for Robotics
+              </h3>
+              <p
+                class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700"
+              >
+              <ul class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
+                <li><strong>DORA Robot Middleware:</strong> A middleware platform designed for robot developers to simplify and accelerate the development, testing and deployment of robot applications. It provides a set of universal tools and interfaces, supporting integration of various robot hardware platforms and software environments, promoting interoperability between different systems.</li>
+
+                <li><strong>Algorithm & Model Library:</strong> Provides pre-trained deep learning model library, including models for visual recognition, path planning, motion control, natural language processing and other fields, helping developers quickly build and deploy robot applications. Meanwhile, we support customized model training and optimization to meet application needs in specific scenarios.</li>
+
+              <li><strong>Operating Systems:</strong> Supports OpenHarmony, Ubuntu, Arceos</li>
+
+              </ul>
+              </p>
+              <p
+                class="text-lg font-light leading-relaxed mt-0 mb-8 text-gray-700"
+              >
+                Based on developer-familiar YAML for Agent data flow orchestration, developers don't need to worry about specific computation processes, DORA provides adaptation capabilities for different software and hardware capabilities.
+              </p>
+              <a
+                href="https://dora-rs.ai/"
+                class="font-bold text-gray-500 px-8 py-4 rounded-md bg-gray-50 hover:bg-gray-400 hover:text-gray-50"
+                >Check Code!</a>
+            </div>
+            <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
+              <div
+                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-green-100"
+              >
+                <img
+                  alt="..."
+                  src="./assets/img/section1.jpeg"
+                  class="w-full align-middle rounded-t-lg"
+                />
+                <blockquote class="relative p-8 mb-4">
+                  <svg
+                    preserveAspectRatio="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 583 95"
+                    class="absolute left-0 w-full block"
+                    style="height: 95px; top: -94px;"
+                  >
+                    <polygon
+                      points="-30,95 583,95 583,65"
+                      class="text-green-100 fill-current"
+                    ></polygon>
+                  </svg>
+                  <h4 class="text-xl font-bold text-gray-800">
+                    Consulting Services
+                  </h4>
+                  <ul class="text-gray-700">
+                    <li><strong>Smart Manufacturing:</strong> Robot assembly, quality inspection and material handling tasks based on large models, using data-driven optimization strategies to improve production line automation level and capacity.</li>
+                    <li><strong>Logistics & Warehousing:</strong> Intelligent storage, sorting and transportation solutions for warehouses and distribution centers using large model-based robots, improving inventory management and order processing efficiency, supporting large-scale logistics operations.</li>
+                    <li><strong>Agricultural Robots:</strong> Planting, harvesting, fertilizing and weeding tasks completed by robots based on large model algorithms, reducing manual labor and improving agricultural production precision and efficiency through intelligent perception and decision-making.</li>
+                    <li><strong>Service Robots:</strong> Service robots powered by large models perform reception, guidance, cleaning and delivery tasks in hotels, shopping malls, exhibition halls and other venues, enhancing customer experience and achieving personalized and efficient service.</li>
+                  </ul>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="relative py-10">
+
+
+      </section>
+      
+    </main>
+    
+  </div>
+  <script>
+    function toggleNavbar(collapseID) {
+      document.getElementById(collapseID).classList.toggle("hidden");
+      document.getElementById(collapseID).classList.toggle("block");
+    }
+  </script>
+
+<footer class="relative bg-gray-300 pt-8 pb-6">
+  <hr class="my-6 border-gray-400" />
+  <div class="container mx-auto px-4">
+    <div class="flex flex-wrap">
+      <div class="w-full lg:w-5/12 px-4">
+        <h4 class="text-3xl font-semibold mb-4">Contact Us</h4>
+        <p class="text-lg text-gray-700">
+          For inquiries about our products and services, please contact us at: 
+          <br class="hidden md:block">
+          <a href="mailto:info@nupylot.com" class="text-blue-600 hover:text-blue-800 inline-block mt-1">info@nupylot.com</a>
+        </p>
+
+        <div class="text-gray-600 text-sm py-1 mt-4">
+          Copyright © 2024
+          <a href="/" class="text-gray-600 hover:text-gray-900">NuPylot Inc.</a>
+        </div>
+      </div>
+
+
+
+
+
+
+    </div>
+    <hr class="my-6 border-gray-400" />
+    <div
+      class="flex flex-wrap items-center md:justify-between justify-center"
+    >
+
+    </div>
+  </div>
+</footer><script async defer src="https://sdk.soopr.co/soopr.js"></script></body>
+
+</html>
