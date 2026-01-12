@@ -88,10 +88,10 @@
             <div class="w-full lg:w-7/12 px-4 mx-auto text-center">
               <div class="px-4">
                 <h1 class="text-white font-semibold text-5xl mb-6">
-                  Making robot intelligence affordable for all
+                  Rust-Core Robotics with Python Speed
                 </h1>
                 <p class="mt-4 text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                  Our embodied intelligence solutions provide a full range of services—from hardware design to software development, and from data analysis to continuous optimization—adaptable to industries and application needs. We are committed to offering research institutions, enterprises, and developers flexible, reliable, and efficient solutions
+                  Built on the DORA robotics framework, we deliver low-latency, high-throughput robot dataflows that are reliable in production. Rust at the core for safety and performance, with Python-first ergonomics for rapid iteration. Modular, scalable, and designed to connect sensors, perception, and control—without the usual middleware overhead.
                 </p>
               </div>
             </div>
@@ -130,9 +130,9 @@
                   >
                     <i class="fas fa-fingerprint"></i>
                   </div>
-                  <h6 class="text-xl font-semibold mb-3">DORA Robot Middleware</h6>
+                  <h6 class="text-xl font-semibold mb-3">DORA Commercial Services</h6>
                   <p class="mt-2 mb-4 text-gray-600">
-                    Provides high performance middleware designed specifically for robotics applications. It offers modular, low-latency communication mechanisms for robot systems, helping developers more efficiently perform multi-sensor data fusion and distributed computing.
+                    Enterprise-grade DORA framework services with SLA guarantees and professional support. Flexible deployment options including SaaS cloud for rapid setup or private deployment for compliance. Dedicated technical support with guaranteed response times and custom feature development.
                   </p>
                 </div>
               </div>
@@ -164,9 +164,9 @@
                   >
                     <i class="fas fa-fingerprint"></i>
                   </div>
-                  <h6 class="text-xl font-semibold mb-3">Agricultural Automation</h6>
+                  <h6 class="text-xl font-semibold mb-3">Robot Data Collection Platform</h6>
                   <p class="mt-2 mb-4 text-gray-600">
-                    Provides robotic technology applications for small-scale automation tasks in agriculture, such as harvesting and weeding. Low-cost, high-performance robots for small-scale agricultural automation. Robots are designed to be used in a wide range of agricultural scenarios.
+                    Supports upload, visualization, annotation and processing of various data types including videos, images, and sensor data. Built-in project management with task assignment. Compatible with mainstream training formats. We also provide robot data collection outsourcing services.
                   </p>
                 </div>
               </div>
@@ -183,7 +183,7 @@
                   </div>
                   <h6 class="text-xl font-semibold mb-3">Data Collection & Analysis</h6>
                   <p class="mt-2 mb-4 text-gray-600">
-                    Provides data analysis and visualization tools to help monitor production conditions in real-time, optimize strategies and resource usage, improve yield and quality.
+                    Provides comprehensive data analysis and visualization tools to help monitor production conditions in real-time, optimize operational strategies and resource usage. Supports multi-dimensional data aggregation, progress statistics, quality reports, and data-driven insights for continuous improvement.
                   </p>
                 </div>
               </div>
@@ -200,7 +200,7 @@
                   </div>
                   <h6 class="text-xl font-semibold mb-3">Remote Monitoring & Control</h6>
                   <p class="mt-2 mb-4 text-gray-600">
-                    Provides cloud platform for remote monitoring of robot operation status, viewing real-time operation data, and adjusting robot tasks as needed.
+                    Provides cloud platform for remote monitoring of robot operation status, viewing real-time operation data, and adjusting robot tasks as needed. Includes IP whitelisting, comprehensive access and operation log auditing, and role-based permission controls for secure fleet management.
                   </p>
                 </div>
               </div>
@@ -217,7 +217,7 @@
                   </div>
                   <h6 class="text-xl font-semibold mb-3">Customized Solutions</h6>
                   <p class="mt-2 mb-4 text-gray-600">
-                    We provide specially designed robots and solutions for different application scenarios to meet the specific needs of various industries.
+                    We provide specially designed robots and solutions for different application scenarios to meet the specific needs of various industries. Our team delivers custom personalized features, private offline deployment options, and tailored integration services for your unique requirements.
                   </p>
                 </div>
               </div>
@@ -233,23 +233,14 @@
               <h3 class="text-3xl mb-2 font-semibold leading-normal">
                 Full-Stack AI for Robotics
               </h3>
-              <p
-                class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700"
-              >
               <ul class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
-                <li><strong>DORA Robot Middleware:</strong> A middleware platform designed for robot developers to simplify and accelerate the development, testing and deployment of robot applications. It provides a set of universal tools and interfaces, supporting integration of various robot hardware platforms and software environments, promoting interoperability between different systems.</li>
+                <li><strong>DORA-Moveit:</strong> An open-source robotics project that integrates the DORA dataflow architecture with motion planning for robotic arms. It demonstrates a complete robotic arm control system capable of both simulation (via MuJoCo) and real hardware control, with collision-free motion planning and workflow automation for tasks like multi-viewpoint capture. The project combines inverse kinematics, motion planning (e.g., RRT-Connect), trajectory execution, and real robot interfaces into a dataflow-driven pipeline for flexible research and development.</li>
 
-                <li><strong>Algorithm & Model Library:</strong> Provides pre-trained deep learning model library, including models for visual recognition, path planning, motion control, natural language processing and other fields, helping developers quickly build and deploy robot applications. Meanwhile, we support customized model training and optimization to meet application needs in specific scenarios.</li>
+                <li><strong>DORA-Nav:</strong> A robotics navigation project built around the DORA framework, focusing on modular and dataflow-driven robot navigation. It provides navigation capabilities such as path planning, motion control, and environment interaction, organized as interconnected processing nodes within DORA, enabling flexible composition, easy experimentation, and clear separation between perception, planning, and control.</li>
 
-              <li><strong>Operating Systems:</strong> Supports OpenHarmony, Ubuntu, Arceos</li>
+                <li><strong>DORA-Viz:</strong> A modular plugin-based 3D visualization framework for robotics applications, featuring displays for sensor data (point clouds, images, laser scans), TF transforms, interactive markers, and robot models. The system allows extending displays, panels, tools, and view controllers.</li>
 
               </ul>
-              </p>
-              <p
-                class="text-lg font-light leading-relaxed mt-0 mb-8 text-gray-700"
-              >
-                Based on developer-familiar YAML for Agent data flow orchestration, developers don't need to worry about specific computation processes, DORA provides adaptation capabilities for different software and hardware capabilities.
-              </p>
               <a
                 href="https://dora-rs.ai/"
                 class="font-bold text-gray-500 px-8 py-4 rounded-md bg-gray-50 hover:bg-gray-400 hover:text-gray-50"
@@ -283,7 +274,6 @@
                   <ul class="text-gray-700">
                     <li><strong>Smart Manufacturing:</strong> Robot assembly, quality inspection and material handling tasks based on large models, using data-driven optimization strategies to improve production line automation level and capacity.</li>
                     <li><strong>Logistics & Warehousing:</strong> Intelligent storage, sorting and transportation solutions for warehouses and distribution centers using large model-based robots, improving inventory management and order processing efficiency, supporting large-scale logistics operations.</li>
-                    <li><strong>Agricultural Robots:</strong> Planting, harvesting, fertilizing and weeding tasks completed by robots based on large model algorithms, reducing manual labor and improving agricultural production precision and efficiency through intelligent perception and decision-making.</li>
                     <li><strong>Service Robots:</strong> Service robots powered by large models perform reception, guidance, cleaning and delivery tasks in hotels, shopping malls, exhibition halls and other venues, enhancing customer experience and achieving personalized and efficient service.</li>
                   </ul>
                 </blockquote>
